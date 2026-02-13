@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Rohit Goswami</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="assets/favicon.ico">
+    <!-- CRITICAL: Apply theme immediately before page renders -->
+    <script>
+        (function() {
+            // Check browser memory immediately
+            const savedTheme = localStorage.getItem('theme');
+            // If memory says 'dark', make it dark. Otherwise default to light.
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Rohit Goswami</a>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="publications.html" class="nav-link">Publications</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle" onclick="const h=document.documentElement; const n=h.getAttribute('data-theme')==='dark'?'light':'dark'; h.setAttribute('data-theme',n); localStorage.setItem('theme',n);">
+                <svg class="sun" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17 10.5C16.2 13.8 13.2 16.3 9.6 16.3C5.5 16.3 2.2 13 2.2 8.9C2.2 5.3 4.7 2.3 8 1.5C7.4 2.1 7 3 7 4C7 6.2 8.8 8 11 8C12 8 12.9 7.6 13.5 7C13.3 8.9 14.9 10.5 17 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <img src="assets/profile-photo.png" alt="Profile" class="nav-profile-pic">
+        </div>
+
+        <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="section-label">Portfolio</p>
+            <h1 class="page-title">Featured Projects</h1>
+            <p class="page-description">A showcase of innovative applications, research implementations, and technical explorations</p>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                
+                <div class="project-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; transition: all 0.3s ease;">
+                    <div style="margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">The Council Agent</h3>
+                        <p class="section-label" style="margin-bottom: 1rem;">Multi-Agent AI System</p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        AI-powered strategy simulator featuring distinct agent personalities (CFO, Union Leader, Visionary) 
+                        that debate strategic decisions. Built with LangGraph, Llama 3 70B, and deployed on Hugging Face.
+                    </p>
+                    <div class="project-meta" style="margin-bottom: 1rem;">
+                        <span class="tag">Python</span>
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">Llama 3</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Groq API</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://huggingface.co/spaces/rohgoswa/the-council-agent" target="_blank" class="btn btn-primary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Live Demo</a>
+                        <a href="https://huggingface.co/spaces/rohgoswa/the-council-agent/tree/main" target="_blank" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Google Earth Engine Analytics</h3>
+                        <p class="section-label" style="margin-bottom: 1rem;">Geospatial Research Platform</p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Custom GEE processing pipelines for satellite imagery analysis, environmental monitoring, 
+                        and land use classification. Part of doctoral research on management of remote sensing technologies.
+                    </p>
+                    <div class="project-meta" style="margin-bottom: 1rem;">
+                        <span class="tag">Google Earth Engine</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Remote Sensing</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">ODL Learning Management System</h3>
+                        <p class="section-label" style="margin-bottom: 1rem;">Educational Technology</p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Comprehensive platform for Open & Distance Learning with learner analytics, 
+                        content management, and academic counseling tools. Supports thousands of ODL learners.
+                    </p>
+                    <div class="project-meta" style="margin-bottom: 1rem;">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">React</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Education</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Research Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Cybersecurity Lab Environment</h3>
+                        <p class="section-label" style="margin-bottom: 1rem;">Security Research</p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Isolated penetration testing environment built with Kali Linux for vulnerability 
+                        assessment, ethical hacking practice, and security research.
+                    </p>
+                    <div class="project-meta" style="margin-bottom: 1rem;">
+                        <span class="tag">Kali Linux</span>
+                        <span class="tag">Metasploit</span>
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">Security</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Lab Setup</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">COVID-19 India Application Analysis</h3>
+                        <p class="section-label" style="margin-bottom: 1rem;">Health Tech Research</p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Comprehensive study analyzing mobile applications developed for COVID-19 management 
+                        in India, examining effectiveness, adoption, and privacy implications.
+                    </p>
+                    <div class="project-meta" style="margin-bottom: 1rem;">
+                        <span class="tag">Research</span>
+                        <span class="tag">Mobile Apps</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Public Health</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="publications.html" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">View Publication</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">IoT Sensor Network</h3>
+                        <p class="section-label" style="margin-bottom: 1rem;">Internet of Things</p>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Distributed sensor network for environmental monitoring with real-time data 
+                        collection, processing, and visualization dashboard.
+                    </p>
+                    <div class="project-meta" style="margin-bottom: 1rem;">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Raspberry Pi</span>
+                        <span class="tag">MQTT</span>
+                        <span class="tag">IoT</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Documentation</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg-secondary); padding: 4rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">More Projects on GitHub</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem;">
+                Explore additional projects, code samples, and open-source contributions on my GitHub profile.
+            </p>
+            <a href="https://github.com/rohgoswa" target="_blank" class="btn btn-primary">View GitHub Profile</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3>Rohit Goswami</h3>
+                    <p>Building the future of Management Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/rohit-goswami-120b28245/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/rohiiittt" target="_blank">Twitter</a></li>
+                            <li><a href="https://github.com/rohgoswa" target="_blank">GitHub</a></li>
+                            <li><a href="https://huggingface.co/rohgoswa" target="_blank">Hugging Face</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#deacb1b6b7aaeaeab99ea7bfb6b1b1f0bdb1b3">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohit Goswami. All rights reserved.</p>
+                <p>Electronics & Communication Engineer | PhD Research Scholar</p>
+            </div>
+        </div>
+    </footer>
+
+    <script d

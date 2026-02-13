@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Goswami | PhD Scholar & AI Researcher</title>
+    <meta name="description" content="Portfolio of Rohit Goswami - PhD Research Scholar in Management, Ex-IBM Specialist, and AI Developer building Agentic Workflows with LangGraph.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rohgoswa.github.io/"> <meta property="og:title" content="Rohit Goswami - Human-AI Synergy">
+    <meta property="og:description" content="PhD Research Scholar & AI Developer. Exploring the intersection of ODL Management and Generative AI.">
+    <meta property="og:image" content="assets/profile-photo.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rohgoswa.github.io/">
+    <meta property="twitter:title" content="Rohit Goswami - Human-AI Synergy">
+    <meta property="twitter:description" content="Building the future of Management Technology with Agentic AI.">
+    <meta property="twitter:image" content="assets/council-screenshot.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="assets/favicon.ico">
+    <script>
+        (function() {
+            // Check browser memory immediately
+            const savedTheme = localStorage.getItem('theme');
+            // If memory says 'dark', make it dark. Otherwise default to light.
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Rohit Goswami</a>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="publications.html" class="nav-link">Publications</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle" onclick="const h=document.documentElement; const n=h.getAttribute('data-theme')==='dark'?'light':'dark'; h.setAttribute('data-theme',n); localStorage.setItem('theme',n);">
+                <svg class="sun" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17 10.5C16.2 13.8 13.2 16.3 9.6 16.3C5.5 16.3 2.2 13 2.2 8.9C2.2 5.3 4.7 2.3 8 1.5C7.4 2.1 7 3 7 4C7 6.2 8.8 8 11 8C12 8 12.9 7.6 13.5 7C13.3 8.9 14.9 10.5 17 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <img src="assets/profile-photo.png" alt="Profile" class="nav-profile-pic">
+        </div>
+
+        <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="hero-label">Management Technologist | AI Researcher (Agentic Workflows) | Ex-IBM | PhD Scholar | UGC NET Qualified</p>
+            <h1 class="hero-title">
+                Building the future through <span class="gradient-text">Human-AI Synergy</span>
+            </h1>
+            <p class="hero-description">
+                PhD Researcher at Geeta University exploring learner perception in Distance Education. 
+                Ex-IBM Security Specialist with 9+ years of experience. Building AI-powered systems 
+                for the Augmented Professional era.
+            </p>
+            <div class="hero-actions">
+            <a href="research.html" class="btn btn-primary">View Research</a>
+            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+            
+            <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary" style="border: 1px solid var(--accent-primary); color: var(--accent-primary);">
+                <span style="margin-right: 5px;">📄</span> Download CV
+            </a>
+        </div>
+        </div>
+
+        <div class="hero-visual">
+            <img src="assets/profile-photo.png" alt="Rohit Goswami" class="hero-image-large">
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</section>
+
+    <!-- Featured Project Section -->
+    <section class="featured-project">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Featured Work</p>
+                <h2 class="section-title">The Council Agent</h2>
+                <p class="section-subtitle">An AI-powered strategy simulation system that revolutionizes decision-making</p>
+            </div>
+            <div class="project-showcase">
+                <div class="project-visual">
+                    <div class="project-image-wrapper">
+                        <img src="assets/council-screenshot.png" alt="The Council Agent Interface" class="project-image">
+                    </div>
+                    <!-- Second Image Gallery -->
+                    <div class="image-gallery" style="margin-top: 2rem;">
+                        <div class="gallery-image">
+                            <img src="assets/council-demo.png" alt="Council Agent Demo View">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="assets/council-screenshot_1.png" alt="Council Agent Alternative View">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-meta">
+                        <span class="tag">Multi-Agent AI</span>
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">Llama 3</span>
+                    </div>
+                    <p class="project-description">
+                        A groundbreaking multi-agent AI system that simulates boardroom debates with distinct 
+                        AI personalities (CFO, Union Leader, Visionary) to provide comprehensive strategic analysis. 
+                        Built with LangGraph, Llama 3 70B, and deployed on Hugging Face Spaces.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Sequential decision-making with role-specific AI agents</li>
+                        <li>Real-time inference using Groq API (LPU technology)</li>
+                        <li>Professional PDF report generation</li>
+                        <li>Docker-based deployment architecture</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/rohgoswa/the-council-agent" target="_blank" class="project-link">
+                            <span>Live Demo</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3H3V13H13V10M8 8L14 2M14 2H10M14 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="projects.html" class="project-link secondary">
+                            <span>View All Projects</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Focus Section -->
+    <section class="research-focus">
+        <div class="container">
+            <div class="section-header centered">
+                <p class="section-label">Areas of Expertise</p>
+                <h2 class="section-title">Research & Innovation</h2>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="4" width="24" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 12H28M12 4V28" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Distance & Online Education</h3>
+                    <p>PhD research on learner support systems, ODL frameworks, and online counseling effectiveness in post-pandemic education</p>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 8V16L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>AI & Agentic Workflows</h3>
+                    <p>Multi-agent systems, LangGraph orchestration, RAG, and advanced LLM applications for strategic decision-making</p>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 28V14L16 4L24 14V28H8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 28V20H20V28" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Cybersecurity & IAM</h3>
+                    <p>Enterprise security delivery, Identity & Access Management, ethical hacking with IBM security experience</p>
+                </div>
+                <div class="focus-card">
+                    <div class="focus-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="10" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 10V8C10 6.89543 10.8954 6 12 6H20C21.1046 6 22 6.89543 22 8V10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Human-AI Collaboration</h3>
+                    <p>"Augmented Professional" concept, Cognitive Democratization, and building AI systems that enhance human potential</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Highlight -->
+    <section class="experience-highlight">
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-text">
+                    <p class="section-label">Professional Journey</p>
+                    <h2 class="section-title">From IBM to Academic Innovation</h2>
+                    <p class="experience-description">
+                        My career spans 9+ years from enterprise security at IBM (Security Delivery Specialist working with 
+                        HealthNet, Godiva, and other American clients) to pioneering distance education support at IGNOU Regional 
+                        Centre Chandigarh. With multiple postgraduate degrees spanning HR, Computer Applications, IoT, and Journalism, 
+                        I bring a uniquely interdisciplinary perspective to complex technological and educational challenges.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="stat-number">9+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Publications</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">UGC NET</div>
+                            <div class="stat-label">Qualified</div>
+                        </div>
+                    </div>
+                    <a href="experience.html" class="btn btn-secondary">Full Experience</a>
+                </div>
+                <div class="experience-visual">
+                    <div class="timeline-preview">
+                        <div class="timeline-item">
+                            <div class="timeline-year">Present</div>
+                            <div class="timeline-content">
+                                <h4>PhD Research Scholar</h4>
+                                <p>Distance & Online Education</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2019-Present</div>
+                            <div class="timeline-content">
+                                <h4>IGNOU RC Chandigarh</h4>
+                                <p>Academic Counselor & Admin</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015-2019</div>
+                            <div class="timeline-content">
+                                <h4>IBM Security Specialist</h4>
+                                <p>Enterprise IAM & Operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's collaborate on something amazing</h2>
+                <p>Whether it's research collaboration, consulting on AI-powered educational systems, or discussing Human-AI Synergy, I'm always open to innovative projects.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+                    <a href="/cdn-cgi/l/email-protection#1f6d707778706c687e5f78727e7673317c7072" class="btn btn-secondary">Email Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3>Rohit Goswami</h3>
+                    <p>Building the future through Human-AI Synergy</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/rohit-goswami-120b28245/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/rohiiittt" target="_blank">Twitter</a></li>
+                            <li><a href="https://github.com/rohgoswa" target="_blank">GitHub</a></li>
+                            <li><a href="https://huggingface.co/rohgoswa" target="_blank">Hugging Face</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#82f0edeae5edf1f5e3c2e5efe3ebeeace1edef">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohit Goswami. All rights reserved.</p>
+                <p>UGC NET Qualified | PhD Scholar | Ex-IBM | AI Researcher</p>
+            </div>
+  

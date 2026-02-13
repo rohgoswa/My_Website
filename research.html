@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Rohit Goswami</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="assets/favicon.ico">
+    <!-- CRITICAL: Apply theme immediately before page renders -->
+    <script>
+        (function() {
+            // Check browser memory immediately
+            const savedTheme = localStorage.getItem('theme');
+            // If memory says 'dark', make it dark. Otherwise default to light.
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Rohit Goswami</a>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="publications.html" class="nav-link">Publications</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle" onclick="const h=document.documentElement; const n=h.getAttribute('data-theme')==='dark'?'light':'dark'; h.setAttribute('data-theme',n); localStorage.setItem('theme',n);">
+                <svg class="sun" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17 10.5C16.2 13.8 13.2 16.3 9.6 16.3C5.5 16.3 2.2 13 2.2 8.9C2.2 5.3 4.7 2.3 8 1.5C7.4 2.1 7 3 7 4C7 6.2 8.8 8 11 8C12 8 12.9 7.6 13.5 7C13.3 8.9 14.9 10.5 17 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <img src="assets/profile-photo.png" alt="Profile" class="nav-profile-pic">
+        </div>
+
+        <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="section-label">Academic Portfolio</p>
+            <h1 class="page-title">Research & Innovation</h1>
+            <p class="page-description">
+                Bridging technology and education through research in distance learning, 
+                AI-powered systems, and human-AI collaboration.
+            </p>
+        </div>
+    </section>
+
+    <section class="research-current">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">PhD Research</p>
+                <h2 class="section-title">Current Focus</h2>
+            </div>
+            <div class="research-main">
+                <div class="research-content">
+                    <h3>Studying How Learners Perceive Support in Distance and Online Education</h3>
+                    <p class="lead-text">
+                        My doctoral research at Geeta University investigates the critical factors that shape learner 
+                        perception and effectiveness of support systems in Open and Distance Learning (ODL) environments.
+                    </p>
+                    <h4>Research Objectives</h4>
+                    <ul class="research-list">
+                        <li>Analyzing learner perception of academic support services in ODL contexts</li>
+                        <li>Evaluating effectiveness of online counseling and learner support mechanisms</li>
+                        <li>Investigating post-pandemic shifts in distance education support requirements</li>
+                        <li>Developing frameworks for ICT-based learner support systems</li>
+                        <li>Understanding barriers and enablers in distance learning environments</li>
+                    </ul>
+                    <h4>Methodology</h4>
+                    <p>
+                        This research employs a mixed-methods approach combining quantitative surveys of ODL learners 
+                        with qualitative interviews and case studies. The study draws on educational psychology, 
+                        instructional design theory, and information systems research to provide comprehensive insights 
+                        into learner support effectiveness.
+                    </p>
+                    <h4>Research Context</h4>
+                    <p>
+                        With over 7 years of direct experience at IGNOU Regional Centre Chandigarh—supporting thousands 
+                        of ODL learners in Commerce, Agriculture Business, and Pharmaceutical Sales Management—this 
+                        research is grounded in real-world observations and practical challenges faced by distance learners.
+                    </p>
+                    <div class="research-meta">
+                        <div class="meta-item">
+                            <strong>Institution:</strong> 
+                            <span>Geeta University, Panipat, Haryana</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Status:</strong> 
+                            <span>In Progress</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Duration:</strong> 
+                            <span>July 2023 - September 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Qualification:</strong> 
+                            <span>UGC NET Qualified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-visual">
+                    <div class="research-card highlighted">
+                        <h4>Key Focus Areas</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Distance Education</span>
+                            <span class="tech-tag">Learner Support</span>
+                            <span class="tech-tag">Online Counseling</span>
+                            <span class="tech-tag">ODL Systems</span>
+                            <span class="tech-tag">ICT in Education</span>
+                            <span class="tech-tag">Post-Pandemic Learning</span>
+                            <span class="tech-tag">Student Perception</span>
+                            <span class="tech-tag">Educational Technology</span>
+                        </div>
+                    </div>
+                    <div class="research-card">
+                        <h4>Research Impact</h4>
+                        <p>
+                            This work aims to provide evidence-based recommendations for improving learner support 
+                            systems in distance education, particularly relevant in the post-COVID era where online 
+                            learning has become increasingly prevalent across all educational levels.
+                        </p>
+                    </div>
+                    <div class="research-card">
+                        <h4>Practical Experience</h4>
+                        <p>
+                            <strong>7+ years at IGNOU</strong> providing academic counseling and learner support, 
+                            directly informing research with ground-level insights from thousands of distance learners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-previous">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Contributions</p>
+                <h2 class="section-title">Published Research & Projects</h2>
+            </div>
+            <div class="research-grid">
+                <div class="research-item">
+                    <div class="research-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 10V16L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>ICT-Based Learner Support Services Post-COVID</h3>
+                    <p>
+                        Published research examining how IGNOU adapted learner support services using ICT 
+                        during and after the COVID-19 pandemic, analyzing effectiveness and learner satisfaction.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Education Technology</span>
+                        <span class="tag">ODL</span>
+                        <span class="tag">COVID-19</span>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4V12M16 20V28M28 16H20M12 16H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Attitude of IGNOU Learners Towards Online Counselling</h3>
+                    <p>
+                        Comprehensive study analyzing learner attitudes and effectiveness of online counseling 
+                        sessions during and post-pandemic, with implications for future ODL support systems.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Online Counseling</span>
+                        <span class="tag">Learner Perception</span>
+                        <span class="tag">ODL</span>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="8" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 8V6C12 5.44772 12.4477 5 13 5H19C19.5523 5 20 5.44772 20 6V8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 14H26" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>AI-Based IoT for Industry 5.0</h3>
+                    <p>
+                        Research contribution exploring the intersection of Artificial Intelligence and Internet 
+                        of Things technologies in next-generation industrial applications and smart systems.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">Industry 5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-interests">
+        <div class="container">
+            <div class="section-header centered">
+                <p class="section-label">Areas of Interest</p>
+                <h2 class="section-title">Broader Research Themes</h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h4>Distance & Online Education</h4>
+                    <p>Learner support systems, ODL frameworks, educational technology, online counseling</p>
+                </div>
+                <div class="interest-card">
+                    <h4>Artificial Intelligence & Agentic Workflows</h4>
+                    <p>Multi-agent systems, LangChain, RAG, Human-AI synergy, Cognitive Democratization</p>
+                </div>
+                <div class="interest-card">
+                    <h4>Educational Technology</h4>
+                    <p>ICT in education, e-learning platforms, learner analytics, post-pandemic learning</p>
+                </div>
+                <div class="interest-card">
+                    <h4>Cybersecurity</h4>
+                    <p>Identity & Access Management (IAM), security delivery, dark web, ethical considerations</p>
+                </div>
+                <div class="interest-card">
+                    <h4>Internet of Things</h4>
+                    <p>IoT applications, smart systems, sensor networks, Industry 5.0 integration</p>
+                </div>
+                <div class="interest-card">
+                    <h4>Human-AI Collaboration</h4>
+                    <p>Augmented Professional concept, AI-enhanced workflows, productivity optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-collaboration">
+        <div class="container">
+            <div class="collaboration-content">
+                <div class="collaboration-text">
+                    <p class="section-label">Open to Collaboration</p>
+                    <h2>Research Partnerships</h2>
+                    <p>
+                        I'm actively seeking collaborations on projects involving distance education, AI-driven 
+                        educational systems, learner support innovation, and human-AI synergy. Whether you're an 
+                        academic institution, research organization, or EdTech company, I'd love to explore potential synergies.
+                    </p>
+                    <div class="collaboration-areas">
+                        <div class="collab-item">
+                            <strong>Joint Research</strong>
+                            <p>ODL systems, learner support, educational AI</p>
+                        </div>
+                        <div class="collab-item">
+                            <strong>Industry Projects</strong>
+                            <p>EdTech solutions, AI implementation</p>
+                        </div>
+                        <div class="collab-item">
+                            <strong>Conference Presentations</strong>
+                            <p>Speaking, workshops, panel discussions</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Propose a Collaboration</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3>Rohit Goswami</h3>
+                    <p>Building the future through Human-AI Synergy</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/rohit-goswami-120b28245/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/rohiiittt" target="_blank">Twitter</a></li>
+                            <li><a href="https://github.com/rohgoswa" target="_blank">GitHub</a></li>
+                            <li><a href="https://huggingface.co/rohgoswa" target="_blank">Hugging Face</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#ee9c818689819d998fae89838f8782c08d8183">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohit Goswami. All rights reserved.</p>
+                <p>UGC NET Qualified | PhD Scholar | Ex-IBM | AI Researcher</p>
+            </div>
+        </div>
+    </footer>
+
+    <script d

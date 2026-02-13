@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rohit Goswami</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="assets/favicon.ico">
+    <!-- CRITICAL: Apply theme immediately before page renders -->
+    <script>
+        (function() {
+            // Check browser memory immediately
+            const savedTheme = localStorage.getItem('theme');
+            // If memory says 'dark', make it dark. Otherwise default to light.
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Rohit Goswami</a>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="research.html" class="nav-link">Research</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="publications.html" class="nav-link">Publications</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle" onclick="const h=document.documentElement; const n=h.getAttribute('data-theme')==='dark'?'light':'dark'; h.setAttribute('data-theme',n); localStorage.setItem('theme',n);">
+                <svg class="sun" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <svg class="moon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17 10.5C16.2 13.8 13.2 16.3 9.6 16.3C5.5 16.3 2.2 13 2.2 8.9C2.2 5.3 4.7 2.3 8 1.5C7.4 2.1 7 3 7 4C7 6.2 8.8 8 11 8C12 8 12.9 7.6 13.5 7C13.3 8.9 14.9 10.5 17 10.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <img src="assets/profile-photo.png" alt="Profile" class="nav-profile-pic">
+        </div>
+
+        <button class="mobile-menu-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+    <section class="page-hero">
+        <div class="container">
+            <p class="section-label">Get in Touch</p>
+            <h1 class="page-title">Let's Connect</h1>
+            <p class="page-description">Whether it's research collaboration, consulting, or just a conversation about technology</p>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Send a Message</h2>
+                    <form action="https://formspree.io/f/mreapdrg" method="POST" id="contact-form" style="display: grid; gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Name</label>
+                            <input type="text" name="name" required style="width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); font-family: var(--font-body); font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Email</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); font-family: var(--font-body); font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Subject</label>
+                            <input type="text" name="subject" required style="width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); font-family: var(--font-body); font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Message</label>
+                            <textarea name="message" required rows="6" style="width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); color: var(--text-primary); font-family: var(--font-body); font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="justify-self: start;">Send Message</button>
+                    </form>
+                </div>
+
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        
+                        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <div style="width: 40px; height: 40px; background: var(--bg-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary);">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M2 4L10 11L18 4M2 4H18M2 4V16H18V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">Email</h4>
+                                    <a href="/cdn-cgi/l/email-protection#21534e494855151546615840494e4e0f424e4c" style="color: var(--accent-primary); font-size: 0.9375rem;"><span class="__cf_email__" data-cfemail="84f6ebecedf0b0b0e3c4fde5ecebebaae7ebe9">[email&#160;protected]</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                                <div style="width: 40px; height: 40px; background: var(--bg-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary);">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M16 7C16 11.4183 10 17 10 17C10 17 4 11.4183 4 7C4 3.68629 6.68629 1 10 1C13.3137 1 16 3.68629 16 7Z" stroke="currentColor" stroke-width="1.5"/>
+                                        <circle cx="10" cy="7" r="2" stroke="currentColor" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">Location</h4>
+                                    <p style="color: var(--text-secondary); font-size: 0.9375rem; margin: 0;">Panipat, Haryana, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Connect on Social Media</h3>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://www.linkedin.com/in/rohit-goswami-120b28245/" target="_blank" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">LinkedIn</a>
+                            <a href="https://twitter.com/rohiiittt" target="_blank" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Twitter</a>
+                            <a href="https://github.com/rohgoswa" target="_blank" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">GitHub</a>
+                            <a href="https://huggingface.co/rohgoswa" target="_blank" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.625rem 1.25rem;">Hugging Face</a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;">
+                        <h4 style="margin-bottom: 0.75rem;">Open to:</h4>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">→</span>
+                                Research Collaborations
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">→</span>
+                                Consulting Projects
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">→</span>
+                                Speaking Engagements
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">→</span>
+                                Academic Partnerships
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h3>Rohit Goswami</h3>
+                    <p>Building the future of Management Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/rohit-goswami-120b28245/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/rohiiittt" target="_blank">Twitter</a></li>
+                            <li><a href="https://github.com/rohgoswa" target="_blank">GitHub</a></li>
+                            <li><a href="https://huggingface.co/rohgoswa" target="_blank">Hugging Face</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#7c0e1314150848481b3c051d141313521f1311">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohit Goswami. All rights reserved.</p>
+            

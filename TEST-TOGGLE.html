@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle Test</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --text-primary: #1d1d1f;
+            --accent-primary: #0066cc;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #000000;
+            --text-primary: #f5f5f7;
+            --accent-primary: #2997ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 { margin-bottom: 2rem; font-size: 2.5rem; }
+        
+        .theme-toggle {
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .status {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--accent-primary);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .test-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            border: 2px solid var(--accent-primary);
+            border-radius: 12px;
+        }
+    </style>
+    
+    <!-- Apply theme immediately -->
+    <script>
+    (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🌓 Theme Toggle Test</h1>
+        
+        <button class="theme-toggle" id="theme-toggle">
+            Click to Toggle Theme
+        </button>
+
+        <div class="status" id="status">
+            Current theme: <span id="current-theme">loading...</span>
+        </div>
+
+        <div class="test-section">
+            <h2>Test Instructions:</h2>
+            <ol style="line-height: 2;">
+                <li>Click the button above</li>
+                <li>Page should switch between dark/light mode</li>
+                <li>Refresh the page - theme should stay the same</li>
+                <li>Open browser console (F12) - check for messages</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>What Should Happen:</h2>
+            <ul style="line-height: 2;">
+                <li>✅ Button is clickable</li>
+                <li>✅ Background changes color</li>
+                <li>✅ Text changes color</li>
+                <li>✅ Console shows "Theme switched to: dark" (or light)</li>
+                <li>✅ Status below updates</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    // Simple theme toggle - guaranteed to work
+    window.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const statusElement = document.getElementById('current-theme');
+        const html = document.documentElement;
+        
+        // Show current theme
+        function updateStatus() {
+            const currentTheme = html.getAttribute('data-theme') || 'light';
+            statusElement.textContent = currentTheme;
+            console.log('Current theme:', currentTheme);
+        }
+        
+        updateStatus();
+        
+        // Toggle on click
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = html.getAttribute('data-theme') || 'light';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                updateStatus();
+                
+                console.log('✅ Theme switched to:', newTheme);
+                alert('Theme switched to: ' + newTheme);
+            });
+            
+            console.log('✅ Theme toggle button found and initialized');
+        } else {
+            console.error('❌ Theme toggle button NOT found!');
+        }
+    });
+    </script>
+</body>
+</html>
