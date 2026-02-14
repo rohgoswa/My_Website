@@ -1026,3 +1026,24 @@ section {
         margin-bottom: 1rem;
     }
 }
+/* --- CONTACT PAGE MOBILE FIX --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Side-by-side on Laptop */
+    gap: 4rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack vertically on Mobile */
+        gap: 2rem;
+    }
+    
+    /* Optional: Fix the input width issues if they persist */
+    .contact-grid input, 
+    .contact-grid textarea {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
