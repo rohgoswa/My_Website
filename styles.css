@@ -137,6 +137,8 @@ a {
     list-style: none;
     gap: var(--spacing-md);
     align-items: center;
+    /* ADD THIS LINE: */
+    
 }
 
 .nav-link {
